@@ -9,9 +9,9 @@
   return {
     defaults: {
       treblle: {
-        apiKey: sails.config.treblle.apiKey || process.env.TREBLLE_API_KEY,
+        apiKey: sails.config.treblle?.apiKey || process.env.TREBLLE_API_KEY,
         projectId:
-          sails.config.treblle.projectId || process.env.TREBLLE_PROJECT_ID,
+          sails.config.treblle?.projectId || process.env.TREBLLE_PROJECT_ID,
       },
     },
     /**
