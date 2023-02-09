@@ -1,6 +1,6 @@
 {
-  "name": "treblle-sails",
-  "version": "0.0.3",
+  "name": "@treblle/sails",
+  "version": "0.1.0",
   "description": "Sails hook for Treblle",
   "main": "index.js",
   "sails": {
@@ -12,20 +12,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DominusKelvin/treblle-sails.git"
+    "url": "git+https://github.com/Treblle/treblle-sails.git"
   },
   "keywords": [
     "sails",
     "api",
     "api visibility",
-    "treblle"
+    "treblle",
+    "sails.js",
+    "hook",
+    "monitoring"
   ],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DominusKelvin/treblle-sails/issues"
+    "url": "https://github.com/Treblle/treblle-sails/issues"
   },
-  "homepage": "https://github.com/DominusKelvin/treblle-sails#readme",
+  "homepage": "https://github.com/Treblle/treblle-sails#readme",
   "peerDependencies": {
     "sails": ">=1"
   },
