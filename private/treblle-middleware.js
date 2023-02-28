@@ -3,6 +3,7 @@ const {
   maskSensitiveValues,
   generateTrebllePayload,
   getRequestDuration,
+  sendPayloadToTreblle,
 } = require('@treblle/utils')
 
 const { version: sdkVersion } = require('../package.json')

@@ -1,4 +1,3 @@
-const { sendPayloadToTreblle } = require('@treblle/utils')
 const treblleMiddleware = require('./private/treblle-middleware')
 
 /**
