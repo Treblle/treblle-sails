@@ -4,6 +4,7 @@ const {
   generateTrebllePayload,
   getRequestDuration,
   sendPayloadToTreblle,
+  getResponsePayload,
 } = require('@treblle/utils')
 
 const { version: sdkVersion } = require('../package.json')
@@ -38,33 +39,11 @@ module.exports = function treblleMiddleware(req, res, next) {
 
     const protocol = `${req.protocol}/${req.httpVersion}`
 
-    let originalResponseBody = res._treblleResponsebody
-    let maskedResponseBody
-    try {
-      if (Buffer.isBuffer(res.payload)) {
-        originalResponseBody = originalResponseBody.toString('utf8')
-      }
-      if (typeof originalResponseBody === 'string') {
-        let parsedResponseBody = JSON.parse(originalResponseBody)
-        maskedResponseBody = maskSensitiveValues(
-          parsedResponseBody,
-          fieldsToMask
-        )
-      } else if (typeof originalResponseBody === 'object') {
-        maskedResponseBody = maskSensitiveValues(
-          originalResponseBody,
-          fieldsToMask
-        )
-      }
-    } catch (error) {
-      // if we can't parse the body we'll leave it empty and set an error
-      errors.push({
-        source: 'onShutdown',
-        type: 'INVALID_JSON',
-        message: 'Invalid JSON format',
-        file: null,
-        line: null,
-      })
+    const { payload: maskedResponseBody, error: invalidResponseBodyError } =
+      getResponsePayload(res._treblleResponsebody, fieldsToMask)
+
+    if (invalidResponseBodyError) {
+      errors.push(invalidResponseBodyError)
     }
 
     // Treblle Payload
