@@ -1,6 +1,6 @@
 {
   "name": "@treblle/sails",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Sails hook for Treblle",
   "main": "index.js",
   "sails": {
@@ -36,7 +36,7 @@
     "sails": ">=1"
   },
   "dependencies": {
-    "@treblle/utils": "^0.1.9"
+    "@treblle/utils": "^0.1.10"
   },
   "devDependencies": {
     "husky": "^8.0.3",
