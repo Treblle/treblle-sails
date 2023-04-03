@@ -75,6 +75,14 @@ npm i @treblle/sails --save
 
 Treblle needs you to specify your [project ID](https://docs.treblle.com/en/dashboard/projects#project-id) and [API key](https://docs.treblle.com/en/dashboard#accessing-your-api-key). `@treblle/sails` makes this easy to do by expecting you to set it up in `config/local.js` as:
 
+```js
+// config/local.js
+treblle: {
+  apiKey: '<YOUR_TREBLLE_API_KEY>',
+  projectId: '<YOUR_TREBLLE_PROJECT_ID>'
+}
+```
+
 > See the [docs](https://docs.treblle.com/en/integrations/sails) for this SDK to learn more.
 
 ## Available SDKs
