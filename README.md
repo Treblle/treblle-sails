@@ -83,6 +83,11 @@ treblle: {
 }
 ```
 
+`@treblle/sails` will also check your environment for the following environment variables:
+
+- `TREBLLE_API_KEY`
+- `TREBLLE_PROJECT_ID`
+
 > See the [docs](https://docs.treblle.com/en/integrations/sails) for this SDK to learn more.
 
 ## Available SDKs
