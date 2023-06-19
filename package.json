@@ -36,7 +36,7 @@
     "sails": ">=1"
   },
   "dependencies": {
-    "@treblle/utils": "^0.1.10"
+    "@treblle/utils": "^0.1.12"
   },
   "devDependencies": {
     "husky": "^8.0.3",
