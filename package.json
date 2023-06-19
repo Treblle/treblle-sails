@@ -1,6 +1,6 @@
 {
   "name": "@treblle/sails",
-  "version": "0.0.6",
+  "version": "0.0.5",
   "description": "Sails hook for Treblle",
   "main": "index.js",
   "sails": {
