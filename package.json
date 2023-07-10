@@ -1,6 +1,6 @@
 {
   "name": "@treblle/sails",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "Sails hook for Treblle",
   "main": "index.js",
   "sails": {
@@ -33,14 +33,14 @@
   },
   "homepage": "https://github.com/Treblle/treblle-sails#readme",
   "peerDependencies": {
-    "sails": ">=1"
+    "sails": "^1.5.6"
   },
   "dependencies": {
-    "@treblle/utils": "^0.1.12"
+    "@treblle/utils": "^0.1.13"
   },
   "devDependencies": {
     "husky": "^8.0.3",
-    "lint-staged": "^13.1.1",
+    "lint-staged": "^13.2.3",
     "prettier": "2.8.4"
   },
   "lint-staged": {
